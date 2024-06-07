@@ -7,8 +7,8 @@ public:
     GameSession(boost::asio::ip::tcp::socket socket);
     void start();
 private:
-    void do_read();
-    void do_write(std::size_t length);
+    void read();
+    void write(std::size_t length);
 
     boost::asio::ip::tcp::socket m_socket;
     std::array<char, 128> m_data;
