@@ -21,8 +21,7 @@ int main() {
         std::cout << "Reply is: ";
         std::cout.write(reply, reply_length);
         std::cout << std::endl;
-    }
-    catch(std::exception& e) {
+    } catch(std::exception& e) {
         std::cerr << "Exception: " << e.what() << "\n";
     }
     return 0;

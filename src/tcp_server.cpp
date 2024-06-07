@@ -35,8 +35,7 @@ int main() {
             acceptor.accept(socket);
             std::thread(session, std::move(socket)).detach();
         }
-    }
-    catch(std::exception& e) {
+    } catch(std::exception& e) {
         std::cerr << "Exception: " << e.what() << "\n";
     }
 
