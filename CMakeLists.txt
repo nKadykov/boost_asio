@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDART_REQUIRED True)
 
 set(CMAKE_TOOLCHANE_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-add_executable(boost_asio_project src/example.cpp)
+add_executable(boost_asio_project src/tcp_server.cpp)
 
 find_package(Boost REQUIRED COMPONENTS system)
 target_include_directories(boost_asio_project PRIVATE ${Boost_INCLUDE_DIRS})
