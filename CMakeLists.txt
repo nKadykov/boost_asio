@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(game_client)
+project(timer_async_example)
 
 set(CMAKE_CXX_STANDART 23)
 set(CMAKE_CXX_STANDART_REQUIRED True)
@@ -8,8 +8,8 @@ set(CMAKE_TOOLCHANE_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 include_directories(include) 
 
-add_executable(game_client include/game_client.h src/game_client.cpp src/client.cpp)
+add_executable(timer_async_example src/timer_async_example.cpp)
 
 find_package(Boost REQUIRED COMPONENTS system)
-target_include_directories(game_client PRIVATE ${Boost_INCLUDE_DIRS})
-target_link_libraries(game_client PRIVATE Boost::system)
+target_include_directories(timer_async_example PRIVATE ${Boost_INCLUDE_DIRS})
+target_link_libraries(timer_async_example PRIVATE Boost::system)
